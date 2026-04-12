@@ -28,7 +28,7 @@ public:
   bool delete_element(const Circle *circle);
   int delete_all(const Circle *circle);
   void empty_list();
-  // anything else
+  void sort();
 };
 
 #endif
