@@ -44,6 +44,10 @@ Circle &Circle::operator=(const Circle &circle) {
   return *this;
 }
 
+bool Circle::operator==(const Circle &circle) {
+  return (centr == circle.centr && radius == circle.radius);
+}
+
 Circle::~Circle() {
   centr.set(0, 0);
   radius = 0;

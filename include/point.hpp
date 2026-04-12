@@ -15,6 +15,7 @@ public:
   int get_x();
   int get_y();
   Point &operator=(const Point &p);
+  bool operator==(const Point &p);
 };
 
 #endif

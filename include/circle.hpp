@@ -20,6 +20,7 @@ public:
   Point &get_center();
   unsigned int get_rad();
   Circle &operator=(const Circle &circle);
+  bool operator==(const Circle &circle);
   ~Circle();
 };
 
