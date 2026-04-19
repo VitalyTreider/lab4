@@ -10,6 +10,7 @@ set(lab4
     src/circle.cpp
     src/list.cpp
     src/point.cpp
+    src/my_string.cpp
 )
 
 add_executable(lab4 ${lab4})

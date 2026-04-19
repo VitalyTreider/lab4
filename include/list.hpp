@@ -1,8 +1,8 @@
 #ifndef LIST_HPP
 #define LIST_HPP
 #include "circle.hpp"
-#include "point.hpp"
 #include <iostream>
+#include <ostream>
 
 class Node {
 public:
@@ -20,6 +20,9 @@ private:
   Node Head;
   Node Tail;
   size_t m_size;
+  Node *split(Node *head);
+  Node *merge(Node *l1, Node *l2);
+  Node *mergeSort(Node *head);
 
 public:
   List();
@@ -28,7 +31,12 @@ public:
   bool delete_element(const Circle *circle);
   int delete_all(const Circle *circle);
   void empty_list();
-  void sort();
+  void sort(); // todo: merge sort
+  friend std::ostream &operator<<(std::ostream &stream, const List &l);
+  friend std::istream &operator>>(std::istream &is, List &l);
 };
+
+std::ostream &operator<<(std::ostream &stream, const List &l);
+std::istream &operator>>(std::istream &is, List &l);
 
 #endif
